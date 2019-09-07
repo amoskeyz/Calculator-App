@@ -4,16 +4,20 @@ var result = document.querySelector('#output');
 var inputValue = document.querySelector('#input-value');
 
 let value = '';
+let isClear = false;
 
   const calculate = (e) => {
     if(e.target.className === 'btn operator'){
+      isClear = false;
         if(e.target.textContent === 'x'){
             value += '*';
         } else value += e.target.textContent;
       }
 
     if(e.target.className === 'btn number'){
-        value += e.target.textContent;
+      if(isClear) value= '';
+      value += e.target.textContent;
+      isClear = false;
     }
 
     if(value !== ''){
@@ -23,6 +27,7 @@ let value = '';
         try{
             result.textContent = eval(value);
             value = eval(value);
+            isClear = true;
         } catch(error){
             result.textContent = 'Syntax Error';
         }
