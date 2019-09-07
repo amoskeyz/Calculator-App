@@ -1,0 +1,102 @@
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 1em;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 0 30px;
+    margin: 0;
+    color: slateblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    display: block;
+  }
+  
+  .main-container {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+      width: 480px;
+  }
+  
+  .result-container {
+    min-height: 170px;
+    background-color: #fff;
+    text-align: right;
+    padding: 40px 30px 0px 30px;
+    position: relative;
+  }
+  
+  #clearScreen {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  #output {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .btn {
+  /*  border: none;*/
+    background: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    outline: none;
+  }
+  
+  .btn-numbers {
+    height: 350px;
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .number {
+    width:33.337%;
+    background-color: slateblue;
+  }
+  
+  .number:hover {
+    background-color: lightskyblue;
+  }
+  
+  .btn-operators {
+    flex: 1;
+    display: flex;
+    height: 350px;
+    flex-direction: column;
+  }
+  
+  .operator {
+    flex: 1;
+    background-color: rebeccapurple;
+  }
+  
+  .operator:hover {
+    background-color: lightskyblue;
+  }
